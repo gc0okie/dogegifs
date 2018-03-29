@@ -1,0 +1,20 @@
+{
+  "name": "dogegifs",
+  "version": "1.0.0",
+  "engines": {
+    "node": "8.10.1"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "giphy-api": "^1.2.7"
+  }
+}
