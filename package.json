@@ -2,7 +2,7 @@
   "name": "dogegifs",
   "version": "1.0.0",
   "engines": {
-    "node": "8.10.1"
+    "node": "8.10.0"
   },
   "description": "",
   "main": "index.js",
