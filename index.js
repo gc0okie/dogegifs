@@ -52,9 +52,9 @@ app.post('/', (req, res1) =>
     ]);
 });
 
-app.get('/', (req, res) => 
+app.get('/', (req, res1) => 
 {
-    var img_url = '';
+
     var giphy = require('giphy-api')('hQZZ5e4DdsdQqY4prZpckQetnyZZpbqP');
     giphy.search({
         q: 'doge',
@@ -63,11 +63,13 @@ app.get('/', (req, res) =>
         rating: 'g',
         fmt: 'json'
         }, (err, res) => {
-            img_url = res.data.url
+            img_url = res.data[0].images.original.url
+            console.log(img_url)
+            res1.send('<img src="' + img_url + '" alt="doge mfkn gifs">')
         }
     )
-    var html = ''
-    res.send(img_url)
+    //res.send(img_url);
+    //<img src="img_girl.jpg" alt="Girl in a jacket">
 });
 
 
