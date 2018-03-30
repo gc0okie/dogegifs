@@ -55,6 +55,7 @@ app.post('/', (req, res1) =>
 app.get('/', (req, res) => 
 {
     var img_url = '';
+    var giphy = require('giphy-api')('hQZZ5e4DdsdQqY4prZpckQetnyZZpbqP');
     giphy.search({
         q: 'doge',
         limit: 1,
