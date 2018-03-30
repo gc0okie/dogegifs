@@ -62,7 +62,7 @@ app.get('/', (req, res) =>
         rating: 'g',
         fmt: 'json'
         }, (err, res) => {
-            img_url = res.data[i].images.fixed_height_downsampled.url
+            img_url = res.data.url
         }
     )
     var html = ''
