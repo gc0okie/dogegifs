@@ -8,7 +8,8 @@ const giphy = require('giphy-api')
 
 app.use(express.json());
 
-app.post('/', (req, res1) => {
+app.post('/', (req, res1) => 
+{
     num_gifs = parseInt(req.body.text);
     if (num_gifs != parseInt(num_gifs) || num_gifs > 20){
         num_gifs = 1;
@@ -50,6 +51,13 @@ app.post('/', (req, res1) => {
     ]);
 });
 
+app.get('/', (req, res) => 
+{
+    res.send('doge gifs!')
+});
+
+
+//#region
 /*
 const gifs = [
     {id: 1, name: 'wow'},
@@ -87,6 +95,8 @@ app.post('/gifs/', (req, res) => {
     console.log(gif)
 });
 */
+//#endregion
+
 // PORT
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...testing...`));
