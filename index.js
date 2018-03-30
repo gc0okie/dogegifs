@@ -54,7 +54,19 @@ app.post('/', (req, res1) =>
 
 app.get('/', (req, res) => 
 {
-    res.send('doge gifs!')
+    var img_url = '';
+    giphy.search({
+        q: 'doge',
+        limit: 1,
+        offset: Math.floor(Math.random() * Math.floor(100)),
+        rating: 'g',
+        fmt: 'json'
+        }, (err, res) => {
+            img_url = res.data[i].images.fixed_height_downsampled.url
+        }
+    )
+    var html = ''
+    res.send(img_url)
 });
 
 
@@ -99,5 +111,5 @@ app.post('/gifs/', (req, res) => {
 //#endregion
 
 // PORT
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Listening on port ${port}...testing...`));
