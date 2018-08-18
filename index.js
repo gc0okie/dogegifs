@@ -65,7 +65,7 @@ app.get('/', (req, res1) =>
         }, (err, res) => {
             img_url = res.data[0].images.original.url
             console.log(img_url)
-            res1.send('<img src="' + img_url + '" alt="doge mfkn gifs">')
+            res1.send('<body><h1>welcome to dogegifs</h1><img src="' + img_url + '" alt="doge mfkn gifs"><h2>refresh page for moar</h2><body>')
         }
     )
     //res.send(img_url);
@@ -115,4 +115,4 @@ app.post('/gifs/', (req, res) => {
 
 // PORT
 const port = process.env.PORT || 5000;
-app.listen(port, () => console.log(`Listening on port ${port}...testing...`));
+app.listen(port, () => console.log(`Listening on port ${port}...TESTING...`));
